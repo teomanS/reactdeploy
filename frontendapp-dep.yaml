@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontendapp
+  namespace: frontendapplication
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontendapp
+  template:
+    metadata:
+      labels:
+        app: frontendapp
+    spec:
+      containers:
+      - name: frontendapp
+        image: teopocregistery.azurecr.io/reactsample:0.0.1
+        env:
+        ports:
+          - name: http-port
+            containerPort: 80
+        resources:
+          limits:
+            cpu: 1
+            memory: 3G
+          requests:
+            cpu : 10m
+            memory: 350M
