@@ -17,7 +17,7 @@ spec:
       - name: frontendapp
         image: teopocregistery.azurecr.io/reactsample:0.0.1
         command: [ "/bin/bash", "-c", "--" ]
-        args: [ "while true; do sleep 30; done;" ]
+        args: [ "yarn start" ]
         ports:
           - name: http-port
             containerPort: 80            
