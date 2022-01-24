@@ -20,7 +20,7 @@ spec:
         args: [ "yarn start" ]
         ports:
           - name: http-port
-            containerPort: 80            
+            containerPort: 3000            
         resources:
           limits:
             cpu: 1
