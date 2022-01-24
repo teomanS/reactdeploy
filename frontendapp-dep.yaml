@@ -16,10 +16,9 @@ spec:
       containers:
       - name: frontendapp
         image: teopocregistery.azurecr.io/reactsample:0.0.1
-        env:
         ports:
           - name: http-port
-            containerPort: 80
+            containerPort: 80            
         resources:
           limits:
             cpu: 1
@@ -27,3 +26,5 @@ spec:
           requests:
             cpu : 10m
             memory: 350M
+      imagePullSecrets:
+      - name: acrcred            
